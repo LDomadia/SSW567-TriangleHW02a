@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jan 14 13:44:00 2016
-Updated Jan 21, 2018
+Updated Sep 10, 2020
 
 The primary goal of this file is to demonstrate a simple python program to classify triangles
 
-@author: jrr
-@author: rk
+@author: Leena Domadia
+I pledge my Honor that I have abided by the Stevens Honor System
 """
 
 def classifyTriangle(a,b,c):
@@ -37,13 +37,13 @@ def classifyTriangle(a,b,c):
     # verify that all 3 inputs are integers  
     # Python's "isinstance(object,type) returns True if the object is of the specified type
     if not(isinstance(a,int) and isinstance(b,int) and isinstance(c,int)):
-        return 'InvalidInput';
+        return 'InvalidInput'
       
     # This information was not in the requirements spec but 
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a >= (b - c)) or (b >= (a - c)) or (c >= (a + b)):
+    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
        return 'NotATriangle'
         
     # now we know that we have a valid triangle 

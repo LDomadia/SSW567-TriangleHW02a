@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Updated Jan 21, 2018
+Updated Sep 10, 2020
 The primary goal of this file is to demonstrate a simple unittest implementation
 
-@author: jrr
-@author: rk
+@author: Leena Domadia
+I pledge my Honor that I have abided by the Stevens Honor System
 """
 
 import unittest
@@ -38,8 +38,23 @@ class TestTriangles(unittest.TestCase):
     def testInvalidInputD(self):
         self.assertEqual(classifyTriangle(-4, 3, 5), 'InvalidInput', '-4,3,5 should be invalid input')
 
-    def testNotATriangle(self):
+    def testNotATriangleA(self):
         self.assertEqual(classifyTriangle(7, 4, 1), 'NotATriangle', '7,4,1 is not a triangle')
+
+    def testNotATriangleB(self):
+        self.assertEqual(classifyTriangle(5, 2, 3), 'NotATriangle', '5,2,3 is not a triangle')
+
+    def testIsoscelesA(self):
+        self.assertEqual(classifyTriangle(3, 5, 3), 'Isosceles', '3,5,3 is isosceles')
+
+    def testIsoscelesB(self):
+        self.assertEqual(classifyTriangle(3, 3, 5), 'Isosceles', '3,3,5 is isosceles')
+
+    def testIsoscelesC(self):
+        self.assertEqual(classifyTriangle(5, 3, 3), 'Isosceles', '5,3,3 is isosceles')
+
+    def testScaleneA(self):
+        self.assertEqual(classifyTriangle(6, 3, 5), 'Scalene', '6,3,5 is scalene')
 
 if __name__ == '__main__':
     print('Running unit tests')
